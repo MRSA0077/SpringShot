@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://0wwjulreawbf"]
+
+[ext_resource type="Script" uid="uid://cbaqfauvh860o" path="res://scripts/bounce_pad.gd" id="1_g6spo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hqrm3"]
+size = Vector3(3, 1.5, 3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_hqrm3"]
+size = Vector3(3, 0.3, 3)
+
+[node name="BouncePad" type="Area3D" unique_id=837230113]
+script = ExtResource("1_g6spo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=622712805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("BoxShape3D_hqrm3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1673745826]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+mesh = SubResource("BoxMesh_hqrm3")
